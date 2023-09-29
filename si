@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Para crear una matriz identidad de n solo se necesita el valor de las filas");
+
+        System.out.println("Cual es el valor para crear una matriz identidad n ");
+        int valorMatrizI = leer.nextInt();
+
+        System.out.println("Cual es el valor para crear una matriz identidad n ");
+        int valorMatrizI1 = leer.nextInt();
+
+
+        int matrizA [][] = new int[valorMatrizI][valorMatrizI1];
+
+        for(int i = 0; i<valorMatrizI ; i++){
+             for(int j = 0; j<valorMatrizI ; j++){
+
+                if( i == j){
+
+            matrizA[i][j] = 1;
+                }else{
+                    matrizA[i][j] = 0;
+                }
+        }
+    }
+
+         for(int i = 0; i<valorMatrizI ; i++){
+            for(int j = 0; j<valorMatrizI ; j++){
+
+
+           System.out.print( matrizA [i][j] + " ");
+        }
+        System.out.println();
+    }
+        
+        
+
+        leer.close();
+    }
+}
